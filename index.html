@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="en"><head>
+<html lang="en">
+<head>
 
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TerraSpace — Sub-surface Resource Intelligence</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600&amp;family=Barlow+Condensed:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
@@ -450,14 +451,20 @@
     .footer-logo img { height: 32px; opacity: 0.6; object-fit: contain; }
     .footer-logo { cursor: pointer; }
     .footer-copy { font-size: 13.5px; color: var(--dim); }
-    .footer-links { display: flex; gap: 24px; }
-    .footer-links a { font-size: 13.5px; color: var(--dim); text-decoration: none; cursor: pointer; transition: color 0.2s; }
+    .footer-links { display: flex; gap: 24px; align-items: center; }
+    .footer-links a { font-size: 13.5px; color: var(--dim); text-decoration: none; cursor: pointer; transition: color 0.2s; display: inline-flex; align-items: center; }
     .footer-links a:hover { color: var(--muted); }
+    .footer-social { display: flex; gap: 14px; align-items: center; margin-left: 4px; }
+    .footer-social a { color: var(--dim); display: inline-flex; align-items: center; justify-content: center; transition: color 0.2s; }
+    .footer-social a:hover { color: var(--muted); }
+    .footer-social svg { width: 16px; height: 16px; display: block; fill: currentColor; }
 
     /* ── RESPONSIVE ── */
     @media (max-width: 900px) {
-      .nav { padding: 0 20px; }
+      .nav { padding: 0 16px; height: 64px; gap: 12px; }
+      .nav-logo img { height: 26px; max-width: 55vw; }
       .nav-links { display: none; }
+      .btn-cta { padding: 8px 14px; font-size: 12.5px; flex-shrink: 0; }
       .hero, .page-header { padding-left: 24px; padding-right: 24px; }
       .section-wrap { padding: 60px 24px; }
       .problem-grid, .solution-grid, .benefits-grid,
@@ -471,8 +478,8 @@
   </style>
 </head>
 <body>
-<div id="root"><div><nav class="nav"><a class="nav-logo" href="#"><img src="assets/logo_white.png" alt="TerraSpace"></a><ul class="nav-links"><li class="nav-item"><a href="#" class="">About<svg class="nav-chevron" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1l4 4 4-4"></path></svg></a><div class="nav-dropdown"><a href="#">Company</a><a href="#">Team</a></div></li><li class="nav-item"><a href="#" class="">Solutions</a></li><li class="nav-item"><a href="#" class="">Contact</a></li></ul><a class="btn-cta" href="#">Request a Demo</a></nav><div><div class="hero"><div class="hero-content"><div class="eyebrow">Deep-Tech Mining Intelligence</div><h1>Sub-surface<br>Resource<br>Intelligence at<br><em>Speed and Scale.</em></h1><p class="hero-sub">TerraSpace brings the lab to the mine site. SmartScan delivers resource-grade mineral analysis in hours — not the weeks required by traditional off-site assay.</p><div class="hero-btns"><a class="btn-primary" href="#">Request a Demo</a><a class="btn-ghost" href="#">Learn More</a></div><div class="hero-stats"><div><div class="stat-val">10<em>×</em></div><div class="stat-lbl">Faster than lab assay</div></div><div><div class="stat-val">On-site</div><div class="stat-lbl">No sample shipping</div></div><div><div class="stat-val">AI</div><div class="stat-lbl">Sensor fusion + ML</div></div></div></div></div><div style="background: rgb(0, 0, 0); padding: 0px;"><div style="max-width: 1280px; margin: 0px auto; padding: 72px 64px;"><div class="sec-label" style="margin-bottom: 18px;">Investor Overview</div><div style="position: relative; padding-bottom: 56.25%; height: 0px; overflow: hidden; border-radius: 3px; box-shadow: 0 0 0 1px var(--border);"><iframe src="https://player.vimeo.com/video/912394661?autoplay=1&amp;muted=1&amp;loop=1&amp;autopause=0&amp;title=0&amp;byline=0&amp;portrait=0&amp;controls=1&amp;background=0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen="" title="TerraSpace Investor Overview" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial;"></iframe></div></div></div><div class="full-bleed bg2"><div class="section-wrap"><div class="sec-label">The Problem</div><h2 class="sec-title">Mineral discovery shouldn't<br>take months.</h2><p class="sec-body">Getting a mine from discovery to production requires a resource estimate accurate enough to permit. Today that depends on shipping core samples to a lab and waiting weeks for results — one of the longest, costliest steps in domestic supply chain buildout.</p><div class="problem-grid"><div class="prob-card"><svg class="prob-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg><h3>Time</h3><p>Drilling programs scheduled months ahead cannot adapt to results. Long lab lead times mean critical decisions are made on stale data.</p></div><div class="prob-card"><svg class="prob-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg><h3>Cost</h3><p>Mineral analysis carries significant cost and backlog, with time-consuming human oversight at every stage from sample collection to final report.</p></div><div class="prob-card"><svg class="prob-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg><h3>Resource Dependence</h3><p>In 2024, the U.S. imported 80% of the rare earth elements it used. Domestic supply chain buildout is limited by slow, centralized analysis.</p></div></div><div class="problem-quote"><p>"That's one of the longest and most costly steps in domestic supply chain buildout — and it hasn't changed in decades. New domestic mine development faces permitting timelines of 7–10 years."</p></div></div></div><div class="section-wrap"><div class="solution-grid"><div><div class="sec-label">The Solution</div><h2 class="sec-title">SmartScan: The Lab<br>at the Mine Site</h2><p class="sec-body">SmartScan deploys proprietary hardware and AI directly at the drill site, analyzing core samples the moment they're recovered. No shipping. No backlog. No waiting weeks for results.</p><div class="tags"><span class="tag">Machine Learning</span><span class="tag">Neural Network</span><span class="tag">Sensor Fusion</span><span class="tag">LIBS</span><span class="tag">Hyperspectral</span></div><div style="display: flex; gap: 14px; margin-top: 28px; flex-wrap: wrap;"><a class="btn-primary" href="#">Explore SmartScan →</a></div></div><div class="sol-img"><img src="assets/smartscan.png" alt="SmartScan hardware platform"><div class="sol-img-caption">SmartScan v1 — Multi-sensor fusion platform with LIBS, Hyperspectral, and PFTNA/PGNAA modules</div></div></div></div><div class="partners-section"><div class="partners-label">Partners &amp; Collaborators</div><div class="logo-scroll"><div class="logo-track"><a href="https://www.nvidia.com/en-us/startups/" target="_blank" rel="noopener noreferrer" title="NVIDIA Inception"><img src="assets/logos/nvidia.png" alt="NVIDIA Inception"></a><a href="https://www.ornl.gov/" target="_blank" rel="noopener noreferrer" title="Oak Ridge National Laboratory"><img src="assets/logos/oakridge.png" alt="Oak Ridge National Laboratory"></a><a href="https://www.riotinto.com/" target="_blank" rel="noopener noreferrer" title="Rio Tinto"><img src="assets/logos/riotinto.png" alt="Rio Tinto"></a><a href="https://resolutioncopper.com/" target="_blank" rel="noopener noreferrer" title="Resolution Copper"><img src="assets/logos/resolution.webp" alt="Resolution Copper"></a><a href="https://www.swri.org/" target="_blank" rel="noopener noreferrer" title="Southwest Research Institute"><img src="assets/logos/swri.png" alt="Southwest Research Institute"></a><a href="https://www.beg.utexas.edu/" target="_blank" rel="noopener noreferrer" title="Texas Bureau of Economic Geology"><img src="assets/logos/texas.png" alt="Texas Bureau of Economic Geology"></a><a href="https://geology.utah.gov/" target="_blank" rel="noopener noreferrer" title="Utah DNR Geological Survey"><img src="assets/logos/utah.png" alt="Utah DNR Geological Survey"></a><a href="https://www.americangilsonite.com/" target="_blank" rel="noopener noreferrer" title="American Gilsonite Company"><img src="assets/logos/gilsonite.jpeg" alt="American Gilsonite Company"></a><a href="https://chileancobaltcorp.com/" target="_blank" rel="noopener noreferrer" title="Chilean Cobalt Corp"><img src="assets/logos/chilean.png" alt="Chilean Cobalt Corp"></a><a href="https://modul8.ai/" target="_blank" rel="noopener noreferrer" title="Modul8"><img src="assets/logos/modul8.webp" alt="Modul8"></a><a href="https://mithrilmining.com/" target="_blank" rel="noopener noreferrer" title="Mithril Mining Corp"><img src="assets/logos/mithril.png" alt="Mithril Mining Corp"></a><a href="https://www.capitalfactory.com/" target="_blank" rel="noopener noreferrer" title="Capital Factory"><img src="assets/logos/capital_factory.png" alt="Capital Factory"></a><a href="https://todaq.net/" target="_blank" rel="noopener noreferrer" title="TODAQ"><img src="assets/logos/todaq.png" alt="TODAQ"></a><a href="https://www.nvidia.com/en-us/startups/" target="_blank" rel="noopener noreferrer" title="NVIDIA Inception"><img src="assets/logos/nvidia.png" alt="NVIDIA Inception"></a><a href="https://www.ornl.gov/" target="_blank" rel="noopener noreferrer" title="Oak Ridge National Laboratory"><img src="assets/logos/oakridge.png" alt="Oak Ridge National Laboratory"></a><a href="https://www.riotinto.com/" target="_blank" rel="noopener noreferrer" title="Rio Tinto"><img src="assets/logos/riotinto.png" alt="Rio Tinto"></a><a href="https://resolutioncopper.com/" target="_blank" rel="noopener noreferrer" title="Resolution Copper"><img src="assets/logos/resolution.webp" alt="Resolution Copper"></a><a href="https://www.swri.org/" target="_blank" rel="noopener noreferrer" title="Southwest Research Institute"><img src="assets/logos/swri.png" alt="Southwest Research Institute"></a><a href="https://www.beg.utexas.edu/" target="_blank" rel="noopener noreferrer" title="Texas Bureau of Economic Geology"><img src="assets/logos/texas.png" alt="Texas Bureau of Economic Geology"></a><a href="https://geology.utah.gov/" target="_blank" rel="noopener noreferrer" title="Utah DNR Geological Survey"><img src="assets/logos/utah.png" alt="Utah DNR Geological Survey"></a><a href="https://www.americangilsonite.com/" target="_blank" rel="noopener noreferrer" title="American Gilsonite Company"><img src="assets/logos/gilsonite.jpeg" alt="American Gilsonite Company"></a><a href="https://chileancobaltcorp.com/" target="_blank" rel="noopener noreferrer" title="Chilean Cobalt Corp"><img src="assets/logos/chilean.png" alt="Chilean Cobalt Corp"></a><a href="https://modul8.ai/" target="_blank" rel="noopener noreferrer" title="Modul8"><img src="assets/logos/modul8.webp" alt="Modul8"></a><a href="https://mithrilmining.com/" target="_blank" rel="noopener noreferrer" title="Mithril Mining Corp"><img src="assets/logos/mithril.png" alt="Mithril Mining Corp"></a><a href="https://www.capitalfactory.com/" target="_blank" rel="noopener noreferrer" title="Capital Factory"><img src="assets/logos/capital_factory.png" alt="Capital Factory"></a><a href="https://todaq.net/" target="_blank" rel="noopener noreferrer" title="TODAQ"><img src="assets/logos/todaq.png" alt="TODAQ"></a></div></div></div><div class="section-wrap"><div class="sec-label">Leadership</div><h2 class="sec-title">Founded by engineers<br>and operators.</h2><p class="sec-body" style="margin-bottom: 40px;">A team with expertise in aerospace engineering, national security, space systems, and subsurface resource detection.</p><div style="display: flex; gap: 14px;"><a class="btn-ghost" href="#">Meet the Team →</a></div></div><footer class="footer"><div class="footer-logo" style="cursor: pointer;"><img src="assets/logo_white.png" alt="TerraSpace"></div><div class="footer-copy">© 2026 TerraSpace Corporation. All rights reserved.</div><div class="footer-links"><a>About</a><a>SmartScan</a><a>Team</a><a>Contact</a></div></footer></div></div></div>
-<script type="text/babel" data-plugins="transform-react-jsx-source" data-filename="inline-0">
+<div id="root"></div>
+<script type="text/babel">
 const { useState, useEffect, useRef } = React;
 
 // ── DATA ──────────────────────────────────────────────────────────────
@@ -538,7 +545,6 @@ const PARTNERS = [
   { img: "assets/logos/utah.png",            name: "Utah DNR Geological Survey",          url: "https://geology.utah.gov/" },
   { img: "assets/logos/gilsonite.jpeg",      name: "American Gilsonite Company",          url: "https://www.americangilsonite.com/" },
   { img: "assets/logos/chilean.png",         name: "Chilean Cobalt Corp",                 url: "https://chileancobaltcorp.com/" },
-  { img: "assets/logos/modul8.webp",         name: "Modul8",                              url: "https://modul8.ai/" },
   { img: "assets/logos/mithril.png",         name: "Mithril Mining Corp",                 url: "https://mithrilmining.com/" },
   { img: "assets/logos/capital_factory.png", name: "Capital Factory",                     url: "https://www.capitalfactory.com/" },
   { img: "assets/logos/todaq.png",           name: "TODAQ",                               url: "https://todaq.net/" },
@@ -619,7 +625,7 @@ function HomePage({ goTo }) {
       {/* Video */}
       <div style={{background:"#000", padding:"0"}}>
         <div style={{maxWidth:"1280px", margin:"0 auto", padding:"72px 64px"}}>
-          <div className="sec-label" style={{marginBottom:"18px"}}>Investor Overview</div>
+          <div className="sec-label" style={{marginBottom:"18px"}}>TerraSpace Overview</div>
           <div style={{
             position:"relative", paddingBottom:"56.25%", height:0,
             overflow:"hidden", borderRadius:"3px",
@@ -630,7 +636,7 @@ function HomePage({ goTo }) {
               style={{position:"absolute", top:0, left:0, width:"100%", height:"100%", border:"none"}}
               allow="autoplay; fullscreen; picture-in-picture"
               allowFullScreen
-              title="TerraSpace Investor Overview"
+              title="TerraSpace Overview"
             ></iframe>
           </div>
         </div>
@@ -876,7 +882,7 @@ function SolutionsPage({ goTo }) {
           <h2 className="sec-title">Built for every operating environment.</h2>
           <div className="use-case-grid">
             <div className="use-case-card">
-              <svg className="use-case-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M14 4l6 6"/><path d="M11 7l6 6"/><path d="M17 7c1.5-1.5 3-2 4-1"/><path d="M14 4c-1-1-.5-2.5 1-4"/><path d="M13 9L4 18l2 2 9-9"/><circle cx="19" cy="19" r="1.4"/><circle cx="15" cy="21" r="1"/><circle cx="22" cy="16" r="0.8"/></svg>
+              <svg className="use-case-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M3.2 21.6l11-11"/><path d="M5 3.4c4.6.3 9.4 3.4 12 6"/><path d="M20.6 19c-.3-4.6-3.4-9.4-6-12"/></svg>
               <h3>Commercial Mining</h3>
               <p>Reduce exploration timelines and costs for active mine operations. Convert core sample backlogs into actionable ore-body data. Enable drill programs that adapt in real time.</p>
             </div>
@@ -886,7 +892,7 @@ function SolutionsPage({ goTo }) {
               <p>Support domestic critical mineral supply chain buildout. Enable rapid characterization of strategically important deposits without dependence on foreign laboratory infrastructure.</p>
             </div>
             <div className="use-case-card">
-              <svg className="use-case-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3a9 9 0 1 0 0 18 7 7 0 0 1 0-18z"/><circle cx="8" cy="10" r="0.9"/><circle cx="7" cy="15" r="0.6"/><circle cx="10.5" cy="17" r="0.7"/></svg>
+              <svg className="use-case-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18 7 7 0 0 1 0-18z" fill="currentColor" stroke="none" opacity="0.85"/><circle cx="15" cy="8.5" r="0.9"/><circle cx="17" cy="13" r="0.7"/><circle cx="14" cy="16" r="0.8"/><circle cx="18" cy="17" r="0.5"/></svg>
               <h3>Lunar Exploration</h3>
               <p>Filling a critical gap in lunar resource characterization. Technology designed to operate autonomously in extreme off-world environments, supporting future infrastructure development.</p>
             </div>
@@ -1005,6 +1011,18 @@ function HomeFooter({ goTo }) {
         <a onClick={() => goTo("solutions")}>SmartScan</a>
         <a onClick={() => goTo("team")}>Team</a>
         <a onClick={() => goTo("contact")}>Contact</a>
+        <span className="footer-social">
+          <a href="https://www.linkedin.com/company/terraspacecorp/" target="_blank" rel="noopener noreferrer" aria-label="TerraSpace on LinkedIn" title="LinkedIn">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.37V9h3.41v1.56h.05c.47-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.21 0 22.23 0z"></path>
+            </svg>
+          </a>
+          <a href="https://x.com/terraspacecorp" target="_blank" rel="noopener noreferrer" aria-label="TerraSpace on X" title="X">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"></path>
+            </svg>
+          </a>
+        </span>
       </div>
     </footer>
   );
@@ -1042,6 +1060,5 @@ function App() {
 
 ReactDOM.createRoot(document.getElementById("root")).render(<App />);
 </script>
-
-
-</body></html>
+</body>
+</html>
